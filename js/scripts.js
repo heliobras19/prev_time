@@ -51,6 +51,10 @@ const hideInformation = () => {
   suggestionContainer.classList.add("hide");
 };
 
+const showCadForm = () => {
+  form_cad.classList.remove("hide")
+}
+
 const showWeatherData = async (city) => {
   hideInformation();
 
@@ -102,3 +106,4 @@ suggestionButtons.forEach((btn) => {
     showWeatherData(city);
   });
 });
+

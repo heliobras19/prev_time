@@ -37,11 +37,12 @@ body {
   display: flex;
 }
 
-.form input {
+input {
   padding: 0.8rem;
   border: none;
   flex: 1;
   border-radius: 4px;
+  margin-bottom: 5px;
 }
 
 .form button {
@@ -147,4 +148,9 @@ body {
 
 #suggestions button:hover {
   opacity: 1;
+}
+
+#btn_cad {
+  cursor: pointer;
+  margin-top: 10px;
 }
