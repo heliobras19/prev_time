@@ -76,8 +76,6 @@ const showWeatherData = async (city) => {
   umidityElement.innerText = `${data.main.humidity}%`;
   windElement.innerText = `${data.wind.speed}km/h`;
 
-  // Change bg image
-  document.body.style.backgroundImage = `url("${apiUnsplash + city}")`;
 
   weatherContainer.classList.remove("hide");
 };
@@ -97,6 +95,17 @@ cityInput.addEventListener("keyup", (e) => {
     showWeatherData(city);
   }
 });
+
+const cadastrar = () => {
+  axios.post('http://35.239.22.115/?path=users', {
+    nome: nome.value,
+    email: email.value,
+    cidade: cidade.value
+  })
+  .then(function (response) {
+    alert("Seus dados foram salvos agora passaras a receber emails")
+  })
+}
 
 // Sugestões
 suggestionButtons.forEach((btn) => {
